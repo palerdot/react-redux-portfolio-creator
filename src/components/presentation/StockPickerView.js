@@ -28,6 +28,7 @@ class StockPickerView extends React.Component {
       <StockView 
         stockId={stockId} key={stockId} 
         stockPrice={this.props.stocks[stockId]}
+        onStockClick={this.props.onStockClick}
       />
     ))
   }
