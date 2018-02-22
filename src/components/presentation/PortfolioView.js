@@ -48,7 +48,7 @@ class PortfolioView extends React.Component {
       return (
         <TableRow key={p.id}>
           <TableCell style={{fontSize: '14px', color: '#287DCE', lineHeight: '16px'}}>{p.id}</TableCell>
-          <TableCell numeric>{p.price}</TableCell>
+          <TableCell numeric>₹ {p.price}</TableCell>
           <TableCell>
             <SharePicker 
               id={p.id}

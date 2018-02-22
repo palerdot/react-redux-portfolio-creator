@@ -22,7 +22,7 @@ class StatisticsView extends React.Component {
             <Grid item xs={6}>
               <Grid container>
                 <Grid item xs={12} style={{fontSize: '16px', color: '#287DCE', textAlign: 'left'}}>Net Worth</Grid>
-                <Grid item xs={12} style={{fontSize: '28px', color: '#222222', lineHeight: '26px', textAlign: 'left'}}>{this.props.net_worth}</Grid>
+                <Grid item xs={12} style={{fontSize: '28px', color: '#222222', lineHeight: '26px', textAlign: 'left'}}>₹ {this.props.net_worth}</Grid>
               </Grid>
             </Grid>
           </Grid>

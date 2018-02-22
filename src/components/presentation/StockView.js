@@ -50,7 +50,7 @@ class StockView extends React.Component {
               </Grid>
               <Grid item xs={4}>
                 <Typography variant="headline" gutterBottom style={{color: '#666666'}}>
-                  {this.props.stockPrice}
+                  ₹ {this.props.stockPrice}
                 </Typography>
                 {this._renderActionIcon()}
               </Grid>
