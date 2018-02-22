@@ -28,7 +28,16 @@ class StockPickerView extends React.Component {
       <StockView 
         stockId={stockId} key={stockId} 
         stockPrice={this.props.stocks[stockId]}
-        onStockClick={this.props.onStockClick}
+        onStockClick={(stockId, stockPrice) => {
+          // before proceeding we have to check if the stock is already is added
+          let is_added = this.props.isStockAdded(stockId)
+          if (is_added) {
+            console.log('stock already added ', stockId)
+            // do not proceed
+            return
+          }
+          this.props.onStockClick(stockId, stockPrice) 
+        }}
       />
     ))
   }

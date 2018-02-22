@@ -25,8 +25,19 @@ function stocksReducer(state = {}, action) {
 
 // portfolio reducer
 function portFolioReducer(state=[], action) {
-  // for now just return the state
-  return state
+  switch (action.type) {
+    case 'ADD_STOCK_TO_PORTFOLIO':
+      return [
+        ...state,
+        {
+          id: action.id,
+          price: action.price,
+          shares: 1
+        }
+      ]
+    default:
+      return state
+  }
 }
 
 // OVERALL REDUCER (to be exported)

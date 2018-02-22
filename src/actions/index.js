@@ -15,9 +15,10 @@ export const populateStockList = (stockList) => {
 }
 
 // adds particular stock to portfolio
-export const addStockToPortfolio = (stockId) => {
+export const addStockToPortfolio = (stockId, stockPrice) => {
   return {
     type: ADD_STOCK_TO_PORTFOLIO,
-    id: stockId
+    id: stockId,
+    price: stockPrice
   }
 }

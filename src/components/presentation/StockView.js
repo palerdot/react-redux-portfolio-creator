@@ -28,7 +28,7 @@ class StockView extends React.Component {
                   {this.props.stockPrice}
                 </Typography>
                 <Icon style={{color: '#00A9D2', cursor: 'pointer'}}
-                  onClick={() => this.props.onStockClick(this.props.stockId)}
+                  onClick={() => this.props.onStockClick(this.props.stockId, this.props.stockPrice)}
                 >add_circle</Icon>
               </Grid>
             </Grid>

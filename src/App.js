@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import './App.css'
 
 import { connect } from 'react-redux'
@@ -10,7 +11,7 @@ import data from './data/data.json'
 
 // import components
 import StockPicker from './components/container/StockPicker'
-import Portfolio from './components/presentation/Portfolio'
+import PortfolioManager from './components/container/PortfolioManager'
 
 class App extends Component {
 
@@ -38,7 +39,7 @@ class App extends Component {
         </p>
 
         <StockPicker />
-        <Portfolio />
+        <PortfolioManager />
 
       </div>
     );

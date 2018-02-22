@@ -10,15 +10,23 @@ import StockPickerView from '../presentation/StockPickerView'
 
 const mapStateToProps = (state) => {
   return {
-    stocks: state.stocks
+    stocks: state.stocks,
+    // helper state to find out if the stock is added to portfolio
+    isStockAdded: (stockId) => {
+      let stock = state.portfolio.find((s) => {
+        return s.id === stockId
+      })
+      console.log('calculate if stock is added to portfolio', stockId, stock)
+      return stock
+    }
   }
 }
  
 const mapDispatchToProps = (dispatch) => {
   return {
-    onStockClick: (stockId) => {
-      console.log('dispatching stock click ', stockId)
-      // dispatch(addStockToPortfolio(stockId))
+    onStockClick: (stockId, stockPrice) => {
+      console.log('dispatching stock click ')
+      dispatch(addStockToPortfolio(stockId, stockPrice))
     }
   }
 }
