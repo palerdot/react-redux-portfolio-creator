@@ -8,6 +8,7 @@ import Grid from 'material-ui/Grid'
 
 // custom components
 import SharePicker from './SharePicker'
+import Statistics from '../container/Statistics'
 
 class PortfolioView extends React.Component {
 
@@ -58,6 +59,12 @@ class PortfolioView extends React.Component {
                 </TableBody>
               </Table>
             </Paper>
+          </Grid>
+          <Grid item xs={3}>
+            porumai! will draw history overview graph
+          </Grid>
+          <Grid item xs={3}>
+            <Statistics />
           </Grid>
         </Grid>
       </div>

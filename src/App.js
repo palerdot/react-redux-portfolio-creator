@@ -22,7 +22,7 @@ class App extends Component {
     this.state = {
       stockList: data.price
     }
-    console.log('initing app ', this.state)
+    console.log('initing app ', data)
     this.handlers = this.createHandlers(this.props.dispatch)
     // dispatch action to populate stocks
     this.handlers.populateStocks(this.state.stockList)
