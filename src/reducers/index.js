@@ -26,6 +26,7 @@ function stocksReducer(state = {}, action) {
 // portfolio reducer
 function portFolioReducer(state=[], action) {
   switch (action.type) {
+    // adds particular stock to portfolio
     case 'ADD_STOCK_TO_PORTFOLIO':
       return [
         ...state,
@@ -35,6 +36,19 @@ function portFolioReducer(state=[], action) {
           shares: 1
         }
       ]
+
+    // updates share count of particular portfolio
+    case 'UPDATE_SHARE_COUNT':
+      // first going through all our shares
+      let updated_portfolio = state.map((s) => {
+        // if we have encountered our share, just update share
+        return (s.id === action.id) 
+          ? {...s, shares: action.count}
+          : s
+      })
+      return updated_portfolio
+
+      // no ops; return default state
     default:
       return state
   }
