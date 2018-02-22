@@ -5,7 +5,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 // action creators
-import { updateShareCount } from '../../actions'
+import { updateShareCount, removeStockFromPortfolio } from '../../actions'
 
 // component to connect
 import PortfolioView from '../presentation/PortfolioView'
@@ -22,6 +22,10 @@ const mapDispatchToProps = (dispatch) => {
       console.log('porumai! updating share count ', id, count)
       // dispatch action to update count
       dispatch(updateShareCount(id, count))
+    },
+    removeStockFromPortfolio: (id) => {
+      // dispatch action to remove stock from portfolio
+      dispatch(removeStockFromPortfolio(id))
     }
   }
 }

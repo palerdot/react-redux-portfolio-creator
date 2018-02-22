@@ -3,7 +3,8 @@
 // action types
 export const ADD_STOCK_TO_PORTFOLIO = 'ADD_STOCK_TO_PORTFOLIO'
 export const POPULATE_STOCKS = 'POPULATE_STOCKS'
-const UPDATE_SHARE_COUNT = 'UPDATE_SHARE_COUNT'
+export const UPDATE_SHARE_COUNT = 'UPDATE_SHARE_COUNT'
+export const REMOVE_STOCK_FROM_PORTFOLIO = 'REMOVE_STOCK_FROM_PORTFOLIO'
 
 // action creators
 
@@ -30,5 +31,13 @@ export const updateShareCount = (id, count) => {
     type: UPDATE_SHARE_COUNT,
     id: id,
     count: count
+  }
+}
+
+// removes stock with id from the portfolio
+export const removeStockFromPortfolio = (id) => {
+  return {
+    type: REMOVE_STOCK_FROM_PORTFOLIO,
+    id: id
   }
 }

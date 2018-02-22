@@ -7,6 +7,31 @@ import Typography from 'material-ui/Typography'
 import Icon from 'material-ui/Icon'
 
 class StockView extends React.Component {
+
+  // helper function to find out if the 
+
+  // helper function to render action icon (add, added)
+  _renderActionIcon() {
+    return (
+      (
+        !this.props.isStockAdded
+        ? (<Icon style={{color: '#00A9D2', cursor: 'pointer'}}
+          onClick={() => this.props.onStockClick(this.props.stockId, this.props.stockPrice)}
+        >
+          add_circle
+        </Icon>)
+        : (
+            <Icon style={{color: 'green'}}
+              onClick={() => {}}
+            >
+              check_circle
+            </Icon>
+          )
+      )
+    )
+  }
+
+
   render() {
     return (
       <Grid item xs={3}>
@@ -27,9 +52,7 @@ class StockView extends React.Component {
                 <Typography variant="headline" gutterBottom style={{color: '#666666'}}>
                   {this.props.stockPrice}
                 </Typography>
-                <Icon style={{color: '#00A9D2', cursor: 'pointer'}}
-                  onClick={() => this.props.onStockClick(this.props.stockId, this.props.stockPrice)}
-                >add_circle</Icon>
+                {this._renderActionIcon()}
               </Grid>
             </Grid>
           </CardContent>

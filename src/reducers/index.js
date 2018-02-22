@@ -37,6 +37,13 @@ function portFolioReducer(state=[], action) {
         }
       ]
 
+    // removes stock with particular id from the portfolio
+    case 'REMOVE_STOCK_FROM_PORTFOLIO':
+      // just return all the stocks which does not have our id
+      return state.filter((p) => {
+        return p.id !== action.id
+      })
+
     // updates share count of particular portfolio
     case 'UPDATE_SHARE_COUNT':
       // first going through all our shares

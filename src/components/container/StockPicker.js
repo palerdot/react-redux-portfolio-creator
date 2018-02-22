@@ -16,7 +16,6 @@ const mapStateToProps = (state) => {
       let stock = state.portfolio.find((s) => {
         return s.id === stockId
       })
-      console.log('calculate if stock is added to portfolio', stockId, stock)
       return stock
     }
   }
