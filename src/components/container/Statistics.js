@@ -20,7 +20,7 @@ function computeNetWorth(portfolio) {
     net_worth = net_worth + (pf.price * pf.shares)
   })
   // let us loop through and calculate
-  return net_worth
+  return net_worth ? net_worth.toFixed(2) : 0
 }
 
 // helper function to compute P/E

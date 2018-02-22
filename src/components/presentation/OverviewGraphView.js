@@ -38,7 +38,8 @@ class OverviewGraphView extends React.Component {
       datasets: [
         {
           label: "Portfolio Overview",
-          fillColor: "rgba(151,187,205,0.2)",
+          // fillColor: "rgba(151,187,205,0.2)",
+          fillColor: "rgba(29, 112, 202, 0.7)",
           strokeColor: "rgba(151,187,205,1)",
           pointColor: "rgba(151,187,205,1)",
           pointStrokeColor: "#fff",
