@@ -19,7 +19,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     updateShareCount: (id, count) => {
-      console.log('porumai! updating share count ', id, count)
       // dispatch action to update count
       dispatch(updateShareCount(id, count))
     },

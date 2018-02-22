@@ -16,7 +16,6 @@ function stocksReducer(state = {}, action) {
     case 'POPULATE_STOCKS':
       // populates given set of stocks to our state
       // just replaces our stock list with the new list
-      console.log('porumai! reducing new stock list?? ', action)
       return action.stockList
     default:
       return state

@@ -22,7 +22,6 @@ class App extends Component {
     this.state = {
       stockList: data.price
     }
-    console.log('initing app ', data)
     this.handlers = this.createHandlers(this.props.dispatch)
     // dispatch action to populate stocks
     this.handlers.populateStocks(this.state.stockList)
@@ -31,13 +30,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">smallcase Portfolio Builder</h1>
-        </header>
-        <p className="App-intro">
-          porumai! will implement portfolio creator
-        </p>
-
+        <header className="App-header"></header>
+        <h1 className="App-title">smallcase Portfolio Builder</h1>
+        
         <StockPicker />
         <PortfolioManager />
 
@@ -48,7 +43,6 @@ class App extends Component {
   // handlers section
   createHandlers(dispatch) {
     let populateStocks = function(stockList) {
-      console.log('populating stocks ', stockList)
       dispatch( populateStockList(stockList) )
     };
 

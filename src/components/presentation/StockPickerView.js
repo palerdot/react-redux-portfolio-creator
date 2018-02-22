@@ -14,7 +14,6 @@ class StockPickerView extends React.Component {
     super(props)
     // setting state; for now nothing
     this.state = {}
-    console.log('initing stockpicker ', props)
   }
 
   // helper function to render stocks
@@ -44,7 +43,10 @@ class StockPickerView extends React.Component {
   render() {
     return (
       <div>
-        <Grid container spacing={24} style={{padding: "17px"}}>
+        <div style={{textAlign: 'left', margin: '29px'}}>
+          <span className="info-label pick-stocks-info-label">PICK STOCKS</span>
+        </div>
+        <Grid container spacing={16} style={{padding: "7px 29px"}}>
           {this._renderStocks()}
         </Grid>
       </div>

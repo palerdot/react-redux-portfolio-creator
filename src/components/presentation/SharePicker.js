@@ -28,18 +28,18 @@ class SharePicker extends React.Component {
 	render() {
     return (
       <Grid container>
-        <Grid item xs={4}>
-          <Icon style={{color: '#00A9D2', cursor: 'pointer'}}
-            onClick={() => this.incrementShareCount()}
-          >add</Icon>  
-        </Grid>
-        <Grid item xs={4} style={{display: 'flex', 'alignItems': 'center', justifyContent: 'center'}}>
-          <div className="share-text">{this.props.shares}</div>
-        </Grid>
-        <Grid item xs={4}>
-          <Icon style={{color: '#00A9D2', cursor: 'pointer'}}
+        <Grid item xs={4} style={{display: 'flex', 'alignItems': 'center', justifyContent: 'center', border: '1px solid #DDDDDD'}}>
+          <Icon style={{color: '#287DCE', cursor: 'pointer', fontSize: '14px'}}
             onClick={() => this.decrementShareCount()}
           >remove</Icon>  
+        </Grid>
+        <Grid item xs={4} style={{display: 'flex', 'alignItems': 'center', justifyContent: 'center', border: '0.1px solid #DDDDDD'}}>
+          <div className="share-text">{this.props.shares}</div>
+        </Grid>
+        <Grid item xs={4} style={{display: 'flex', 'alignItems': 'center', justifyContent: 'center', border: '1px solid #DDDDDD'}}>
+          <Icon style={{color: '#287DCE', cursor: 'pointer', fontSize: '14px'}}
+            onClick={() => this.incrementShareCount()}
+          >add</Icon>  
         </Grid>
       </Grid>
     )

@@ -21,7 +21,7 @@ class StockView extends React.Component {
           add_circle
         </Icon>)
         : (
-            <Icon style={{color: 'green'}}
+            <Icon style={{color: '#33CC33'}}
               onClick={() => {}}
             >
               check_circle

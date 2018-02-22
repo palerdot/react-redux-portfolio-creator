@@ -14,7 +14,6 @@ import data from '../../data/data.json'
 
 // helper function to calculate the net worth
 function computeNetWorth(portfolio) {
-  console.log('computing net worth ', portfolio)
   // initial net worth is 0
   let net_worth = 0
   _.each(portfolio, (pf) => {

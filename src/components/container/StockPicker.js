@@ -24,7 +24,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onStockClick: (stockId, stockPrice) => {
-      console.log('dispatching stock click ')
       dispatch(addStockToPortfolio(stockId, stockPrice))
     }
   }

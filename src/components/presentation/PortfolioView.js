@@ -19,13 +19,11 @@ class PortfolioView extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
-    console.log('initing portfolio ', props, props.portfolio)
   }
 
   // helper function to compute network
   computeNetWorth() {
     let portfolio = this.props.portfolio
-    console.log('computing net worth ', portfolio)
     // initial net worth is 0
     let net_worth = 0
     _.each(portfolio, (pf) => {
@@ -49,7 +47,7 @@ class PortfolioView extends React.Component {
     return this.props.portfolio.map((p) => {
       return (
         <TableRow key={p.id}>
-          <TableCell>{p.id}</TableCell>
+          <TableCell style={{fontSize: '14px', color: '#287DCE', lineHeight: '16px'}}>{p.id}</TableCell>
           <TableCell numeric>{p.price}</TableCell>
           <TableCell>
             <SharePicker 
@@ -60,9 +58,8 @@ class PortfolioView extends React.Component {
           </TableCell>
           <TableCell numeric>{this.computeWeight(p.price, p.shares)}</TableCell>
           <TableCell numeric>
-            <Icon style={{color: 'red', cursor: 'pointer'}}
+            <Icon style={{color: '#FF7C7C', cursor: 'pointer', fontSize: '18px'}}
               onClick={() => {
-                console.log('removing stock from portfolio ?? ', p.id)
                 this.props.removeStockFromPortfolio(p.id)
               }}
             >remove_circle</Icon>  
@@ -75,14 +72,18 @@ class PortfolioView extends React.Component {
   render() {
     return (
       <div>
-        Porumai! Portfolio component
-        <Grid container spacing={24} style={{padding: "17px"}}>
+
+        <div style={{textAlign: 'left', margin: '29px'}}>
+          <span className="info-label manage-portfolio-info-label">MANAGE PORTFOLIO</span>
+        </div>
+
+        <Grid container spacing={16} style={{padding: "7px 29px"}}>
           <Grid item xs={6}>
             <Paper>
               <Table>
                 <TableHead>
                   <TableRow className="pf-header">
-                    <TableCell className="pf-h-value">ID</TableCell>
+                    <TableCell className="pf-h-value">STOCK</TableCell>
                     <TableCell numeric className="pf-h-value">PRICE</TableCell>
                     <TableCell numeric className="pf-h-value">SHARE</TableCell>
                     <TableCell numeric className="pf-h-value">WEIGHT</TableCell>
@@ -98,7 +99,7 @@ class PortfolioView extends React.Component {
           <Grid item xs={3}>
             <OverviewGraph />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Statistics />
           </Grid>
         </Grid>

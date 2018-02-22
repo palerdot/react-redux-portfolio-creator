@@ -11,7 +11,7 @@ class OverviewGraphView extends React.Component {
     // set state; we are storing height and weight our graph container
     this.state = {
       width: 300,
-      height: 300
+      height: 250
     }
   }
 
@@ -109,7 +109,7 @@ class OverviewGraphView extends React.Component {
   render() {
     return (
       <div ref="graphContainer">
-        Porumai! portfolio overview graph
+        <div style={{fontSize: '22px', color: '#1D70CA', textAlign: 'left', padding: '11px 29px'}}>Portfolio Overview</div>
         <LineChart data={this._getChartData()} options={this._getChartOptions()} width={this.state.width} height={this.state.height} />
       </div>
     )
