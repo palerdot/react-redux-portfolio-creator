@@ -1,12 +1,12 @@
 # Portfolio Builder
 
-A simple portfolio builder built with react and redux
+A simple Stock Portfolio builder built with react and redux
 
 ## Setting up
 
 This project is bootstrapped with `create-react-app`. Please make sure you have **latest node** (preferable 6+)
 
-```
+```javascript
 // install dependencies
 yarn install
 // start the dev server
