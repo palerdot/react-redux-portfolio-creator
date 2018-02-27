@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header"></header>
-        <h1 className="App-title">smallcase Portfolio Builder</h1>
+        <h1 className="App-title">Portfolio Builder</h1>
         
         <StockPicker />
         <PortfolioManager />
